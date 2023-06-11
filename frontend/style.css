@@ -1,0 +1,90 @@
+
+body {
+    width: 550;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: #000;
+  }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.text-container {
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    }
+
+.text-container h1{
+margin: 0;
+font-size: 150px;
+color: rgba(225,225,225, .01);
+background-image: url("https://previews.123rf.com/images/vpif/vpif1903/vpif190300033/121468529-mobile-repair-and-service-concept-isometric-smartphone-with-tools-and-spare-parts-vector.jpg");
+background-repeat: repeat;
+-webkit-background-clip:text;
+animation: animate 15s ease-in-out infinite;
+text-align: center;
+text-transform: uppercase;
+font-weight: 900;
+}
+
+
+@keyframes animate {
+    0%, 100% {
+    background-position: left top;
+    }
+    25%{
+    background-position: right bottom;
+    }
+    50% {
+    background-position: left bottom;
+    }
+    75% {
+    background-position: right top;
+    }   
+}
+
+/* button css */
+
+.button-container {
+    /* height: 100vh; */
+    top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+    position: relative;
+    }
+@import 
+    url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&di@import splay=swap');
+
+    
+    button{
+      padding: 25px 30px;
+      background-color: #050801;
+      color: #03e9f4;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      letter-spacing: 4px;
+      overflow: hidden;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    
+    button:hover{
+        background: #03e9f4;
+        color: #050801;
+        box-shadow: 0 0 5px #03e9f4,
+                    0 0 25px #03e9f4,
+                    0 0 50px #03e9f4,
+                    0 0 200px #03e9f4;
+         -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+    }
+
