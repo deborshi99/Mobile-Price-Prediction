@@ -1,31 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Predict Price</title>
-    <link rel="stylesheet" href="../css/predict_page_style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/predict_page_style.css">
+  <script src="../script.js"></script>
+  <title>Document</title>
 </head>
 <body>
-    <div class="input-box">
-        <h2>Input</h2>
-        <form>
-          <div class="user-box">
-            <input type="text" name="" required="">
-            <label>Username</label>
-          </div>
-          <div class="user-box">
-            <input type="password" name="" required="">
-            <label>Password</label>
-          </div>
-          <a href="#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Submit
-          </a>
-        </form>
-      </div>
+  <form action='' class='form'>
+    <p class='field required half'>
+      <label class='label required' for='ram'>Random Access Memory in Megabytes(RAM)</label>
+      <input class='text-input' id='Ram' name='name' required type='number' value='Use Tab'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='int_memory'>Internal Memory in Gigabytes</label>
+      <input class='text-input' id='int_memory' name='int_memory' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='clock_speed'>Clock Speed</label>
+      <input class='text-input' id='clock_speed' name='clock_speed' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='battery-power'>Battery Power in Mah</label>
+      <input class='text-input' id='battery-power' name='battery-power' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='fc'>Front Camera mega pixels</label>
+      <input class='text-input' id='fc' name='fc' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='m-dep'>Mobile Depth in cm</label>
+      <input class='text-input' id='m-dep' name='m-dep' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='mobile_wt'>Mobile Weight</label>
+      <input class='text-input' id='mobile_wt' name='mobile_wt' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='pc'>Primary Camera mega pixels</label>
+      <input class='text-input' id='pc' name='pc' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='px_height'>Pixel Resolution Height</label>
+      <input class='text-input' id='px_height' name='px_height' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='px_weight'>Pixel Resolution Width</label>
+      <input class='text-input' id='px_weight' name='px_weight' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='sc_h'>Screen Height of mobile in cm</label>
+      <input class='text-input' id='sc_h' name='sc_h' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='sc_w'>Screen Width of mobile in cm</label>
+      <input class='text-input' id='sc_w' name='sc_w' required type='number'>
+    </p>
+    <p class='field required half'>
+      <label class='label' for='talk-time'>Longest time that a single battery charge will last</label>
+      <input class='text-input' id='talk-time' name='talk-time' required type='number'>
+    </p>
+    <div class='field half'>
+      <label class='label'>Bluetooth</label>
+      <ul class='options'>
+        <li class='option'>
+          <input class='option-input' id='blue-yes' name='option' type='radio' value=1>
+          <label class='option-label' for='blue-yes'>Yes</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='blue-no' name='option' type='radio' value='0'>
+          <label class='option-label' for='blue-no'>No</label>
+        </li>
+      </ul>
+    </div>
+    <div class='field half'>
+      <label class='label'>Dual Sim</label>
+      <ul class='options1'>
+        <li class='option'>
+          <input class='option-input' id='dual-sim-yes' name='option' type='radio' value=1>
+          <label class='option-label' for='dual-sim-yes'>Yes</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='dual-sim-no' name='option' type='radio' value='0'>
+          <label class='option-label' for='dual-sim-no'>No</label>
+        </li>
+      </ul>
+    </div>
+
+    <div class='field half'>
+      <label class='label'>4G Enable</label>
+      <ul class='options'>
+        <li class='option'>
+          <input class='option-input' id='four-g-yes' name='option' type='radio' value=1>
+          <label class='option-label' for='four-g-yes'>Yes</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='four-g-no' name='option' type='radio' value='0'>
+          <label class='option-label' for='four-g-no'>No</label>
+        </li>
+      </ul>
+    </div>
+
+    <div class='field half'>
+      <label class='label'>3G Enable</label>
+      <ul class='options'>
+        <li class='option'>
+          <input class='option-input' id='three-g-yes' name='option' type='radio' value=1>
+          <label class='option-label' for='three-g-yes'>Yes</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='three-g-no' name='option' type='radio' value='0'>
+          <label class='option-label' for='three-g-no'>No</label>
+        </li>
+      </ul>
+    </div>
+    
+    <div class='field half'>
+      <label class='label'>Touch Screen Enable</label>
+      <ul class='options'>
+        <li class='option'>
+          <input class='option-input' id='touch_screen-yes' name='option' type='radio' value=1>
+          <label class='option-label' for='touch_screen-yes'>Yes</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='touch_screen-no' name='option' type='radio' value='0'>
+          <label class='option-label' for='touch_screen-no'>No</label>
+        </li>
+      </ul>
+    </div>
+
+    <div class='field half'>
+      <label class='label'>Wifi Enable</label>
+      <ul class='options'>
+        <li class='option'>
+          <input class='option-input' id='wifi-yes' name='option' type='radio' value=1>
+          <label class='option-label' for='wifi-yes'>Yes</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='wifi-no' name='option' type='radio' value='0'>
+          <label class='option-label' for='wifi-no'>No</label>
+        </li>
+      </ul>
+    </div>
+
+    <div class='field'>
+      <label class='label'>Number of cores of processor(n_cors)</label>
+      <ul class='options'>
+        <li class='option'>
+          <input class='option-input' id='n_cores-1' name='option' type='radio' value=1>
+          <label class='option-label' for='n_cores-1'>1</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='n_cores-2' name='option' type='radio' value='0'>
+          <label class='option-label' for='n_cores-2'>2</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='n_cores-3' name='option' type='radio' value='0'>
+          <label class='option-label' for='n_cores-3'>3</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='n_cores-4' name='option' type='radio' value='0'>
+          <label class='option-label' for='n_cores-4'>4</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='n_cores-5' name='option' type='radio' value='0'>
+          <label class='option-label' for='n_cores-5'>5</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='n_cores-6' name='option' type='radio' value='0'>
+          <label class='option-label' for='n_cores-6'>6</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='n_cores-7' name='option' type='radio' value='0'>
+          <label class='option-label' for='n_cores-7'>7</label>
+        </li>
+        <li class='option'>
+          <input class='option-input' id='n_cores-8' name='option' type='radio' value='0'>
+          <label class='option-label' for='n_cores-8'>8</label>
+        </li>
+      </ul>
+    </div>
+
+    <p class='field half'>
+      <input class='button' type='submit' value='Predict' onclick="onclick();">
+    </p>
+  </form>
+  
 </body>
 </html>
